@@ -29,7 +29,6 @@
         text-align: center;
         cursor: pointer;
         border-radius: 15px;
-        overflow: hidden;
         background: rgba(0,0,0,0.5);
         text-decoration: none;
         color: white;
@@ -57,12 +56,37 @@
         font-weight: bold;
         font-size: 18px;
     }
+.channel {
+  position: relative;
+}
+
+.channel:first-child::after {
+  content: 'New Arrival';
+  position: absolute;
+  top: -28px;         /* مزید اوپر */
+  left: 50%;
+  transform: translateX(-50%);
+  background: #ffcc00;
+  color: black;
+  padding: 6px 14px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 4px;
+  pointer-events: none;
+  z-index: 999;
+}
+
 </style>
 </head>
 <body>
 
 <h1> SKY BLUE IPTV SERVICES </h1>
 <div class="container">
+
+ <a class="channel" href="MIX IPTV 1.html" target="_blank">
+        <img src="https://i.postimg.cc/jqghqRgh/bl.png" alt="LIVE TV">
+        <div class="channel-name"> MIX IPTV 1 </div>
+    </a>   
     <a class="channel" href="Live tv 1.html" target="_blank">
         <img src="https://i.postimg.cc/jqghqRgh/bl.png" alt="LIVE TV">
         <div class="channel-name"> LIVE TV </div>
@@ -87,7 +111,7 @@
         <img src="https://i.postimg.cc/jqghqRgh/bl.png" alt="Indian TV 2">
         <div class="channel-name">Indian TV 2 </div>
     </a>
-    
+ 
 </div>
 
 </body>
