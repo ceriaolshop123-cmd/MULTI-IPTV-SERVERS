@@ -79,7 +79,38 @@
 </style>
 </head>
 <body>
+<a class="channel" href="#" onclick="downloadAndPlay(event, 'https://app.netlify.com/04d3fbc5-d020-4916-89c7-37d53c8d085c')">
+  <img src="https://i.postimg.cc/jqghqRgh/bl.png" alt="LIVE TV">
+  <div class="channel-name"> MIX IPTV 2 </div>
+</a>
 
+<!-- Hidden video player -->
+<video id="player" width="640" height="360" controls style="display:none; margin-top:20px;"></video>
+
+<script>
+  function downloadAndPlay(event, fileUrl) {
+    event.preventDefault();
+
+    // 1️⃣ Download the file
+    const link = document.createElement('a');
+    link.href = fileUrl;
+    link.download = '';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+
+    // 2️⃣ Then auto play
+    const player = document.getElementById('player');
+    setTimeout(() => {
+      player.src = fileUrl;
+      player.style.display = 'block';
+      player.play().catch(err => console.log('Autoplay blocked:', err));
+    }, 2000);
+  }
+</script>
+
+
+    
 <h1> SKY BLUE IPTV SERVICES </h1>
 <div class="container">
 
