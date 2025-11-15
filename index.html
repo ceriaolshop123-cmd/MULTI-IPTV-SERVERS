@@ -34,12 +34,12 @@
         color: white;
         transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
         box-shadow: 0 5px 15px rgba(0,0,0,0.4);
-        border: 4px solid transparent; /* initial border */
+        border: 4px solid transparent;
     }
     .channel:hover {
         transform: scale(1.05);
         box-shadow: 0 10px 25px rgba(0,0,0,0.6);
-        border-color: #ffcc00; /* color border on hover */
+        border-color: #ffcc00;
     }
     .channel img {
         width: 100%;
@@ -56,6 +56,7 @@
         font-weight: bold;
         font-size: 18px;
     }
+
 .channel {
   position: relative;
 }
@@ -63,7 +64,7 @@
 .channel:first-child::after {
   content: 'New Arrival';
   position: absolute;
-  top: -28px;         /* مزید اوپر */
+  top: -28px;
   left: 50%;
   transform: translateX(-50%);
   background: #ffcc00;
@@ -75,26 +76,26 @@
   pointer-events: none;
   z-index: 999;
 }
-
 </style>
 </head>
 <body>
 
-
-   
 <h1> SKY BLUE IPTV SERVICES </h1>
+
 <div class="container">
 
-  <a class="channel" href="MIX IPTV 2.html" target="_blank">
+    <a class="channel" href="MIX IPTV 2.html" target="_blank">
         <img src="https://i.postimg.cc/jqghqRgh/bl.png" alt="MIX IPTV 2">
         <div class="channel-name"> MIX IPTV 2 </div>
     </a>    
 
- <a class="channel" href="https://www.mediafire.com/file/w86q1uk69pqfc2l/MIX+TV+1.html/file" target="_blank">
+    <a class="channel" href="https://www.mediafire.com/file/w86q1uk69pqfc2l/MIX+TV+1.html/file" target="_blank">
         <img src="https://i.postimg.cc/MHHZbhmB/blh.png" alt="MIX IPTV 1">
         <div class="channel-name"> MIX IPTV 1 </div>
     </a>   
-    <a class="channel" href="Live tv 1.html" target="_blank">
+
+    <!-- 🔒 PASSWORD PROTECTED BOX (LIVE TV) -->
+    <a class="channel" href="#" onclick="openLockedBox()">
         <img src="https://i.postimg.cc/jqghqRgh/bl.png" alt="LIVE TV">
         <div class="channel-name"> LIVE TV </div>
     </a>
@@ -111,12 +112,38 @@
 
     <a class="channel" href="LIVE TV3.html" target="_blank">
         <img src="https://i.postimg.cc/jqghqRgh/bl.png" alt="LIVE TV 3">
-        <div class="channel-name">LIVE TV 3 </div>
+        <div class="channel-name"> LIVE TV 3 </div>
     </a>
-    
-    
- 
+
 </div>
+
+<script>
+// 🔒 Password Lock Function
+function openLockedBox() {
+
+    let passURL = "https://raw.githubusercontent.com/khan220/MULTI-IPTV-SERVERS/main/password1.txt";
+
+    fetch(passURL)
+        .then(response => response.text())
+        .then(realPass => {
+
+            realPass = realPass.trim();
+            let userPass = prompt("Enter Password to Unlock:");
+
+            if (userPass === null) return;
+
+            if (userPass === realPass) {
+                window.open("Live tv 1.html", "_blank");
+            } else {
+                alert("❌ Wrong Password!");
+            }
+
+        })
+        .catch(error => {
+            alert("⚠️ Error loading password file.");
+        });
+}
+</script>
 
 </body>
 </html>
