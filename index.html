@@ -56,26 +56,6 @@
         font-weight: bold;
         font-size: 18px;
     }
-
-.channel {
-  position: relative;
-}
-
-.channel:first-child::after {
-  content: 'New Arrival';
-  position: absolute;
-  top: -28px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: #ffcc00;
-  color: black;
-  padding: 6px 14px;
-  font-size: 16px;
-  font-weight: bold;
-  border-radius: 4px;
-  pointer-events: none;
-  z-index: 999;
-}
 </style>
 </head>
 <body>
@@ -84,23 +64,46 @@
 
 <div class="container">
 
+    <!-- 🔐 PASSWORD PROTECTED TEST BOX -->
+    <div class="protected-box" style="
+        width: 300px;
+        text-align: center;
+        background: rgba(0,0,0,0.5);
+        border-radius: 15px;
+        padding: 10px;
+        border: 4px solid transparent;
+    ">
+
+        <!-- Password Input -->
+        <div class="pw-area">
+            <input type="password" placeholder="Enter Password" 
+                   style="width:95%; padding:8px; border-radius:10px; margin-bottom:10px;">
+            <button onclick="unlockBox(this)"
+                    style="padding:8px 15px; border-radius:10px; background:#ffcc00;">
+                Unlock
+            </button>
+        </div>
+
+        <!-- Hidden Content -->
+        <div class="content-area" style="display:none;">
+            <a class="channel" href="MIX IPTV 2.html" target="_blank">
+                <img src="https://i.postimg.cc/jqghqRgh/bl.png" alt="TEST LOCKED CHANNEL">
+                <div class="channel-name"> TEST LOCKED CHANNEL </div>
+            </a>
+        </div>
+    </div>
+
+    <!-- باقی آپ کے اصل باکسز -->
     <a class="channel" href="MIX IPTV 2.html" target="_blank">
         <img src="https://i.postimg.cc/jqghqRgh/bl.png" alt="MIX IPTV 2">
         <div class="channel-name"> MIX IPTV 2 </div>
-    </a>    
-<!-- 🔒 PASSWORD PROTECTED BOX (LIVE TV) -->
-    <a class="channel" href="#" onclick="openLockedBox()">
-        <img src="https://i.postimg.cc/jqghqRgh/bl.png" alt="LIVE TV">
-        <div class="channel-name"> LIVE TV </div>
     </a>
 
-    
     <a class="channel" href="https://www.mediafire.com/file/w86q1uk69pqfc2l/MIX+TV+1.html/file" target="_blank">
         <img src="https://i.postimg.cc/MHHZbhmB/blh.png" alt="MIX IPTV 1">
         <div class="channel-name"> MIX IPTV 1 </div>
-    </a>   
+    </a>
 
-    
     <a class="channel" href="Live tv 1.html" target="_blank">
         <img src="https://i.postimg.cc/jqghqRgh/bl.png" alt="LIVE TV">
         <div class="channel-name"> LIVE TV </div>
@@ -118,36 +121,37 @@
 
     <a class="channel" href="LIVE TV3.html" target="_blank">
         <img src="https://i.postimg.cc/jqghqRgh/bl.png" alt="LIVE TV 3">
-        <div class="channel-name"> LIVE TV 3 </div>
+        <div class="channel-name">LIVE TV 3 </div>
     </a>
 
 </div>
 
+<!-- 🔐 Password Script -->
 <script>
-// 🔒 Password Lock Function
-function openLockedBox() {
+let globalPassword = null;
 
-    let passURL = "https://raw.githubusercontent.com/khan220/MULTI-IPTV-SERVERS/main/password1.txt";
+fetch("https://raw.githubusercontent.com/khan220/MULTI-IPTV-SERVERS/main/password1.txt")
+    .then(res => res.text())
+    .then(txt => globalPassword = txt.trim())
+    .catch(err => console.log("Password Load Error:", err));
 
-    fetch(passURL)
-        .then(response => response.text())
-        .then(realPass => {
+function unlockBox(btn) {
+    const box = btn.closest(".protected-box");
+    const input = box.querySelector("input");
+    const content = box.querySelector(".content-area");
 
-            realPass = realPass.trim();
-            let userPass = prompt("Enter Password to Unlock:");
+    if (!globalPassword) {
+        alert("Password loading... Try again in 2 seconds.");
+        return;
+    }
 
-            if (userPass === null) return;
-
-            if (userPass === realPass) {
-                window.open("Live tv 1.html", "_blank");
-            } else {
-                alert("❌ Wrong Password!");
-            }
-
-        })
-        .catch(error => {
-            alert("⚠️ Error loading password file.");
-        });
+    if (input.value === globalPassword) {
+        box.querySelector(".pw-area").style.display = "none";
+        content.style.display = "block";
+        box.style.borderColor = "#ffcc00";
+    } else {
+        alert("❌ Incorrect Password");
+    }
 }
 </script>
 
