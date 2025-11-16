@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart IPTV Player</title>
+
+<script src="https://cdn.jsdelivr.net/npm/mpegts.js@latest"></script>
+<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+
+<style>
+body{margin:0;background:#000;color:#0ff;font-family:Arial,sans-serif;display:flex;height:100vh;overflow:hidden}
+#sidebar{width:280px;background:#111;padding:15px;overflow-y:auto;border-right:2px solid #0ff;transition:.5s}
+#sidebar.hidden{width:0;padding:0;overflow:hidden;border:none}
+#main{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center}
+h2{text-shadow:0 0 10px #0ff}
+video{width:90%;max-width:900px;height:400px;border:3px solid #0ff;border-radius:10px;box-shadow:0 0 25px #0ff}
+button{background:linear-gradient(90deg,#00e0ff,#00ffff);border:none;padding:8px 16px;border-radius:6px;color:#000;font-weight:bold;cursor:pointer}
+.category-header{display:flex;justify-content:space-between;align-items:center;background:rgba(0,255,255,.1);padding:8px 10px;border-radius:8px;cursor:pointer;color:#00e0ff;font-weight:bold;border:1px solid #00e0ff;margin-bottom:6px}
+.channel{display:flex;align-items:center;gap:8px;padding:6px 10px;margin-bottom:4px;background:rgba(0,0,0,.6);border-radius:8px;cursor:pointer}
+.channel:hover{background:linear-gradient(90deg,#00e0ff,#00ffff);color:#000}
+.channel img{width:40px;height:40px;border-radius:6px}
+#toggleMenu{position:absolute;top:10px;left:10px;background:#00ffff;color:#000;border:none;border-radius:5px;padding:6px 10px;cursor:pointer;font-weight:bold;z-index:10}
+</style>
+</head>
+<body>
+
+<button id="toggleMenu">☰ Menu</button>
+
+<div id="sidebar">
+<h3 style="text-align:center;">📺 Channel List</h3>
+
+<div class="category-block">
+<div class="category-header" onclick="toggleCategory(this)">☪️ General<span>▼</span></div>
+<div class="category-channels">
+
+<div class="channel" onclick="playFromList('PTV English','http://212.32.241.201:8000/play/a04x')">
+<img src="https://makkahlive.net/isv/peacelive.gif"> TV English
+</div>
+
+<div class="channel" onclick="playFromList('Hu TV','http://69.64.57.208/france2/playlist.m3u8')">
+<img src="https://makkahlive.net/mictv/hudalive.gif"> Hu TV
+</div>
+
+<div class="channel" onclick="playFromList('Movie MP4','http://wroxfibra.com:80/Q3sdXWJw8Kxxx22222/pKefJHyVKExxxxxxxxa12/1115803.ts')">
+<img src="https://makkahlive.net/iictv/hudalive.gif"> Movie MP4 Test
+</div>
+
+</div>
+</div>
+
+</div>
+
+<div id="main">
+<h2 id="status">Select a channel</h2>
+<video id="player" controls autoplay></video>
+<div>
+<button id="prev">⏮ Previous</button>
+<button id="next">⏭ Next</button>
+</div>
+</div>
+
+<script>
+
+const sidebar=document.getElementById('sidebar');
+const player=document.getElementById('player');
+const status=document.getElementById('status');
+let mpeg=null;let hls=null;
+let channels=[];let currentIndex=0;
+
+document.querySelectorAll('.channel').forEach(ch=>{
+ const name=ch.textContent.trim();
+ const onclick=ch.getAttribute('onclick');
+ const url=onclick.match(/'(.*?)','(.*?)'/)[2];
+ channels.push({title:name,url:url});
+});
+
+function toggleCategory(h){
+ document.querySelectorAll('.category-channels').forEach(c=>c.style.display='none');
+ document.querySelectorAll('.category-header span').forEach(s=>s.textContent='▼');
+ const c=h.nextElementSibling;const a=h.querySelector('span');
+ if(c.style.display==='block'){c.style.display='none';a.textContent='▼'}
+ else{c.style.display='block';a.textContent='▲'}
+}
+
+toggleMenu.onclick=()=>sidebar.classList.toggle('hidden');
+
+
+// AUTO PROXY FIX FOR WROXFIBRA MP4
+function getSafeURL(url){
+ if(url.includes("wroxfibra.com")) 
+   return "https://cors-proxy.fringe.zone/?" + encodeURIComponent(url);
+
+ return url;
+}
+
+function autoPlay(url){
+ if(mpeg){mpeg.destroy();mpeg=null}
+ if(hls){hls.destroy();hls=null}
+
+ if(mpegts.isSupported()){
+  mpeg=mpegts.createPlayer({type:'mpegts',url:url});
+  mpeg.attachMediaElement(player);
+  mpeg.load();mpeg.play();
+ } else if(Hls.isSupported()){
+  hls=new Hls();hls.loadSource(url);hls.attachMedia(player);
+ } else {
+  player.src=url;player.play();
+ }
+
+
+ if(mpeg){mpeg.destroy();mpeg=null}
+ if(hls){hls.destroy();hls=null}
+
+ const lower=url.toLowerCase();
+
+ // MP4
+ if(lower.endsWith(".mp4")){
+   player.src=url;
+   player.load();
+   player.play();
+   return;
+ }
+
+ // M3U8
+ if(lower.endsWith(".m3u8")){
+   if(Hls.isSupported()){
+     hls=new Hls();
+     hls.loadSource(url);
+     hls.attachMedia(player);
+   } else {
+     player.src=url;
+     player.play();
+   }
+   return;
+ }
+
+ // TS or MPEG-TS
+ if(mpegts.isSupported()){
+   mpeg=mpegts.createPlayer({type:'mpegts',url:url});
+   mpeg.attachMediaElement(player);
+   mpeg.load();
+   mpeg.play();
+ } else {
+   player.src=url;
+   player.play();
+ }
+}
+
+
+function playFromList(name,url){
+ autoPlay(url);
+ player.volume=0.1;
+ status.textContent='📺 Now Playing: '+name;
+ setTimeout(()=>sidebar.classList.add('hidden'),5000);
+}
+
+prev.onclick=()=>{
+ currentIndex=(currentIndex-1+channels.length)%channels.length;
+ const c=channels[currentIndex];
+ playFromList(c.title,c.url);
+};
+
+next.onclick=()=>{
+ currentIndex=(currentIndex+1)%channels.length;
+ const c=channels[currentIndex];
+ playFromList(c.title,c.url);
+};
+
+</script>
+</body>
+</html>
