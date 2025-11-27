@@ -1,9 +1,9 @@
 #EXTM3U
-#EXTINF:-1 group-title="-", Shraddha MH 1
+#EXTINF:-1 , Shraddha MH 1
 http://202.164.50.194:8000/play/a03w/index.m3u8
-#EXTINF:-1 group-title="-",24 Ghanta
+#EXTINF:-1 ,24 Ghanta
 http://202.164.50.194:8000/play/a04n/index.m3u8
-#EXTINF:-1 group-title="-",24 TAAS
+#EXTINF:-1 ,24 TAAS
 http://202.164.50.194:8000/play/a04o/index.m3u8
 #EXTINF:-1 group-title="-",4TV NEWS
 http://202.164.50.194:8000/play/a004/index.m3u8
