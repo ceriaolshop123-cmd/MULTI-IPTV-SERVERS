@@ -95,11 +95,16 @@ https://cdn21lhr.tamashaweb.com:8087/jazzauth/AurLife-abr/live/vsat-365TV-H/chun
 #EXTINF:-1 tvg-logo="https://i.imgur.com/GfWLn3O.jpg", aurLife HD
 http://124.109.47.101/hls/stream1.m3u8?
 
-#EXTINF:-1 tvg-logo="https://i.postimg.cc/XBvSyxtv/green-entertainment-tv-logo-png-seeklogo-616407.png", Green Entertainment
+#EXTINF:-1 tvg-logo="https://i.postimg.cc/XBvSyxtv/green-entertainment-tv-logo-png-seeklogo-616407.png", Green Entertainment HD
 https://cdn05khi.tamashaweb.com:8087/jazzauth/Green_Entertainment-abr/live/vsat-green-H/chunks.m3u8?
+#EXTINF:-1 tvg-logo="https://i.postimg.cc/XBvSyxtv/green-entertainment-tv-logo-png-seeklogo-616407.png", Green Entertainment
+https://cdn05khi.tamashaweb.com:8087/jazzauth/Green_Entertainment-abr/live/vsat-green-M/chunks.m3u8?
 
-#EXTINF:-1 tvg-logo="https://i.postimg.cc/PCvpBn2f/1738840613135.webp", HUM TV
+#EXTINF:-1 tvg-logo="https://i.postimg.cc/PCvpBn2f/1738840613135.webp", HUM TV HD
 https://cdn23lhr.tamashaweb.com:8087/jazzauth/humTV-abr/live/vsat-humtv-H/chunks.m3u8?
+#EXTINF:-1 tvg-logo="https://i.postimg.cc/PCvpBn2f/1738840613135.webp", HUM TV
+https://cdn23lhr.tamashaweb.com:8087/jazzauth/humTV-abr/live/vsat-humtv-M/chunks.m3u8?
+
 
 #EXTINF:-1 tvg-logo="https://i.postimg.cc/5QNyNh1b/1750322366525.webp", PTV National
 https://cdn22lhr.tamashaweb.com:8087/jazzauth/PTVNational-abr/live/193H/chunks.m3u8?
