@@ -88,7 +88,10 @@ https://cdn21lhr.tamashaweb.com:8087/jazzauth/Digital-pak-abr/live/DP-AI_720p/ch
 #EXTINF:-1 tvg-logo="https://i.postimg.cc/BPsMPyKR/1755087012153.webp",Digital pak
 https://cdn24lhr.tamashaweb.com:8087/jazzauth/Digital-pak-abr/live/DP-AI_480p/chunks.m3u8?
 
-
+#EXTINF:-1 tvg-logo="https://i.imgur.com/GfWLn3O.jpg", aurLife 
+https://cdn21lhr.tamashaweb.com:8087/jazzauth/AurLife-abr/live/vsat-365TV-L/chunks.m3u8?
+#EXTINF:-1 tvg-logo="https://i.imgur.com/GfWLn3O.jpg", aurLife HD
+https://cdn21lhr.tamashaweb.com:8087/jazzauth/AurLife-abr/live/vsat-365TV-H/chunks.m3u8?
 #EXTINF:-1 tvg-logo="https://i.imgur.com/GfWLn3O.jpg", aurLife HD
 http://124.109.47.101/hls/stream1.m3u8?
 
