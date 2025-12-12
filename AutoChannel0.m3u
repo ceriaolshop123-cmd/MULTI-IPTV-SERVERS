@@ -63,7 +63,7 @@ https://cdn02khi.tamashaweb.com:8087/jazzauth/GTVNews-abr/live/vsat-129H/chunks.
 #EXTINF:-1 tvg-logo="https://i.postimg.cc/zyNPC6YC/Suno-News.webp", Suno News
 https://cdn21lhr.tamashaweb.com:8087/jazzauth/Suno_News-abr/live/vsat-89H/chunks.m3u8?
 
-#EXTINF:-1 tvg-logo="https://i.postimg.cc/210zZ4L5/1686912075-logo.webp", ABN News
+#EXTINF:-1 tvg-logo="https://i.postimg.cc/210zZ4L5/1686912075-logo.webp", ABN News HD
 https://cdn12isb.tamashaweb.com:8087/jazzauth/ABNnews-abr/live/vsat-aurlife-H/chunks.m3u8?
 #EXTINF:-1 tvg-logo="https://i.postimg.cc/210zZ4L5/1686912075-logo.webp", ABN News
 https://cdn22lhr.tamashaweb.com:8087/jazzauth/ABNnews-abr/live/vsat-aurlife-M/chunks.m3u8?
@@ -83,8 +83,11 @@ https://cdn21lhr.tamashaweb.com:8087/jazzauth/GeoEntertainment-abr/live/vsat-geo
 #EXTINF:-1 tvg-logo="https://i.postimg.cc/wtL3MTd0/1750321510303.webp", PTV Home
 https://cdn05khi.tamashaweb.com:8087/jazzauth/PTVHome-abr/live/190H/chunks.m3u8?
 
-#EXTINF:-1 tvg-logo="https://i.postimg.cc/BPsMPyKR/1755087012153.webp", Digital Pak
+#EXTINF:-1 tvg-logo="https://i.postimg.cc/BPsMPyKR/1755087012153.webp",Digital pak HD
 https://cdn21lhr.tamashaweb.com:8087/jazzauth/Digital-pak-abr/live/DP-AI_720p/chunks.m3u8?
+#EXTINF:-1 tvg-logo="https://i.postimg.cc/BPsMPyKR/1755087012153.webp",Digital pak
+https://cdn24lhr.tamashaweb.com:8087/jazzauth/Digital-pak-abr/live/DP-AI_480p/chunks.m3u8?
+
 
 #EXTINF:-1 tvg-logo="https://i.imgur.com/GfWLn3O.jpg", aurLife HD
 http://124.109.47.101/hls/stream1.m3u8?
