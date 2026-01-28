@@ -123,6 +123,7 @@ http://176.65.146.224:4004/play/a07k
 http://176.65.146.224:4004/play/a07m
 #EXTINF:-1,FS ITV1+1
 http://176.65.146.224:4004/play/a07g
+#EXTINF:-1 tvg-id="ITV2.HD.uk" tvg-logo="https://i.ibb.co/Yc66t7f/ITV2.png", FS ITV2 HD
 #EXTINF:-1,FS ITV2 HD
 http://176.65.146.224:4004/play/a07l
 #EXTINF:-1,FS ITV2+1
