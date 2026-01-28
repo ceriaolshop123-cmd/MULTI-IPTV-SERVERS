@@ -195,7 +195,7 @@ http://176.65.146.224:4001/play/a08i
 http://176.65.146.224:4001/play/a08h/
 #EXTINF:-1 tvg-id="BBC.One.Lon.HD.uk" tvg-logo="https://i.ibb.co/Xk2nLVq/BBC-One.png",FS BBC One Lon HD
 http://176.65.146.224:4001/play/a08e
-#EXTINF:-1,FS BBC Two Wal HD
+#EXTINF:-1 tvg-id="BBC.Two.HD.uk" tvg-logo="https://i.ibb.co/7vG6Nvz/BBC-Two.png",FS BBC Two Wal FHD
 http://176.65.146.224:4001/play/a08f
 #EXTINF:-1,FS CBeebies HD
 http://176.65.146.224:4001/play/a08g
