@@ -38,7 +38,7 @@ http://176.65.146.224:4002/play/a075
 http://176.65.146.224:4002/play/a06z
 #EXTINF:-1,FS More4+1
 http://176.65.146.224:4002/play/a06v
-#EXTINF:-1,FS Quest Red
+#EXTINF:-1 tvg-id="Quest.Red.uk" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-kingdom/quest-red-uk.png",FS Quest Red
 http://176.65.146.224:4002/play/a071
 #EXTINF:-1,FS BBC One CI HD
 http://176.65.146.224:4008/play/a06f
@@ -247,7 +247,7 @@ http://176.65.146.224:4007/play/a06u/
 http://176.65.146.224:4007/play/a06n/
 #EXTINF:-1,FS STV HD
 http://176.65.146.224:4007/play/a073
-#EXTINF:-1,FS Sky Mix HD
+#EXTINF:-1 tvg-id="Sky.Mix.HD.uk" group-title="TV" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/sky-mix-uk.png",FS Sky Mix HD
 http://176.65.146.224:4007/play/a071
 #EXTINF:-1,FS U&Dave
 http://176.65.146.224:4007/play/a077
