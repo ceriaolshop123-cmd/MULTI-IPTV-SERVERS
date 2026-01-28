@@ -56,7 +56,7 @@ http://176.65.146.224:4003/play/a06h
 http://176.65.146.224:4003/play/a06n
 #EXTINF:-1,FS 5SELECT
 http://176.65.146.224:4003/play/a06k
-#EXTINF:-1 tvg-id="5STAR.uk" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-kingdom/5-star-uk.png", FS 5STAR
+#EXTINF:-1 tvg-id="5STAR.uk" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-kingdom/5-star-uk.png",FS 5STAR
 http://176.65.146.224:4003/play/a06j
 #EXTINF:-1,FS 5USA+1
 http://176.65.146.224:4003/play/a06i
@@ -66,7 +66,7 @@ http://176.65.146.224:4003/play/a06t
 http://176.65.146.224:4003/play/a06e
 #EXTINF:-1,FS Channel 5
 http://176.65.146.224:4003/play/a06g
-#EXTINF:-1,FS HD Channel 5 HD
+#EXTINF:-1 tvg-id="Channel.5.HD.uk" tvg-logo="https://i.ibb.co/16SnsKq/skychb1800.png",FS HD Channel 5 HD
 http://176.65.146.224:4003/play/a06m
 #EXTINF:-1,FS Channel 5+1
 http://176.65.146.224:4003/play/a06l
