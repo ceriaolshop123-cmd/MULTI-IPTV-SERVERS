@@ -38,7 +38,7 @@ http://176.65.146.224:4002/play/a06z
 #EXTINF:-1,FS More4+1
 http://176.65.146.224:4002/play/a06v
 #EXTINF:-1 tvg-id="Quest.Red.uk" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-kingdom/quest-red-uk.png",FS Quest Red
-http://176.65.146.224:4002/play/a071
+http://176.65.146.224:4007/play/a06w
 #EXTINF:-1,FS BBC One CI HD
 http://176.65.146.224:4008/play/a06f
 #EXTINF:-1,FS BBC One SW HD
@@ -238,8 +238,6 @@ http://176.65.146.224:4007/play/a06s
 http://176.65.146.224:4007/play/a06v
 #EXTINF:-1,FS QUEST+1
 http://176.65.146.224:4007/play/a06x
-#EXTINF:-1,FS Quest Red
-http://176.65.146.224:4007/play/a06w
 #EXTINF:-1,FS Quest Red+1
 http://176.65.146.224:4007/play/a06u
 #EXTINF:-1,FS Really
