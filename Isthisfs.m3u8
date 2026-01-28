@@ -223,7 +223,7 @@ http://176.65.146.224:4007/play/a06o/
 http://176.65.146.224:4007/play/a06j/
 #EXTINF:-1,FS Dave ja vu
 http://176.65.146.224:4007/play/a06l/
-#EXTINF:-1,FS Drama
+#EXTINF:-1 tvg-id="U.and.Drama.uk" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/u-and-drama-uk.png",1FS U&Drama
 http://176.65.146.224:4007/play/a06h/
 #EXTINF:-1,FS Drama+1
 http://176.65.146.224:4007/play/a06k/
