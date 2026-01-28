@@ -249,7 +249,7 @@ http://176.65.146.224:4007/play/a06n/
 http://176.65.146.224:4007/play/a073
 #EXTINF:-1 tvg-id="Sky.Mix.HD.uk" group-title="TV" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/sky-mix-uk.png",FS Sky Mix HD
 http://176.65.146.224:4007/play/a071
-#EXTINF:-1,FS U&Dave
+#EXTINF:-1 tvg-id="U.and.Dave.HD.uk" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/u-and-dave-uk.png",FS U&Dave
 http://176.65.146.224:4007/play/a077
 #EXTINF:-1,FS U&DaveJaVu
 http://176.65.146.224:4007/play/a07c/
