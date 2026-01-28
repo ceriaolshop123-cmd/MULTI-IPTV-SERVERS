@@ -24,7 +24,7 @@ http://176.65.146.224:4002/play/a070
 http://176.65.146.224:4002/play/a06w
 #EXTINF:-1,FS E4+1
 http://176.65.146.224:4002/play/a06t
-#EXTINF:-1,FS FHD Channel 4
+#EXTINF:-1 tvg-id="Channel.4.HD.uk" tvg-logo="https://i.ibb.co/v3WBCFV/Channel-4.png", FS FHD Channel 4 FHD
 http://176.65.146.224:4002/play/a06b
 #EXTINF:-1,FS Faith UK
 http://176.65.146.224:4002/play/a073
@@ -212,7 +212,7 @@ http://176.65.146.224:4006/play/a06b/
 http://176.65.146.224:4007/play/a070/
 #EXTINF:-1,FS CNBC HD
 http://176.65.146.224:4007/play/a072
-#EXTINF:-1,FS Channel 4 HD
+#EXTINF:-1 tvg-id="Channel.4.HD.uk" tvg-logo="https://i.ibb.co/v3WBCFV/Channel-4.png", FS Channel 4 HD
 http://176.65.146.224:4007/play/a074
 #EXTINF:-1,FS DMAX
 http://176.65.146.224:4007/play/a06r/
