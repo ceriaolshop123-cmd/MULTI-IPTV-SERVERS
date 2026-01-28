@@ -3,7 +3,8 @@
 
 #EXTINF:-1,SkyBlue IPTV
 https://cdn.pixabay.com/video/2025/12/10/321012.mp4?
-#EXTINF:-1,FS 4seven
+
+#EXTINF:-1 tvg-id="4seven.uk" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-kingdom/4-seven-uk.png",FS 4seven
 http://176.65.146.224:4002/play/a06x
 #EXTINF:-1,FS BBC ALBA HD
 http://176.65.146.224:4002/play/a06j
