@@ -24,7 +24,7 @@ http://176.65.146.224:4002/play/a070
 http://176.65.146.224:4002/play/a06w
 #EXTINF:-1,FS E4+1
 http://176.65.146.224:4002/play/a06t
-#EXTINF:-1,FS E4+1
+#EXTINF:-1,FS FHD Channel 4
 http://176.65.146.224:4002/play/a06b
 #EXTINF:-1,FS Faith UK
 http://176.65.146.224:4002/play/a073
@@ -52,11 +52,11 @@ http://176.65.146.224:4008/play/a06g
 http://176.65.146.224:4008/play/a06i
 #EXTINF:-1,FS 5 USA
 http://176.65.146.224:4003/play/a06h
-#EXTINF:-1,FS 5ACTION
+#EXTINF:-1 tvg-id="5ACTION.uk" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-kingdom/5-action-uk.png",FS 5ACTION
 http://176.65.146.224:4003/play/a06n
 #EXTINF:-1,FS 5SELECT
 http://176.65.146.224:4003/play/a06k
-#EXTINF:-1,FS 5STAR
+#EXTINF:-1 tvg-id="5STAR.uk" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-kingdom/5-star-uk.png", FS 5STAR
 http://176.65.146.224:4003/play/a06j
 #EXTINF:-1,FS 5USA+1
 http://176.65.146.224:4003/play/a06i
@@ -66,7 +66,7 @@ http://176.65.146.224:4003/play/a06t
 http://176.65.146.224:4003/play/a06e
 #EXTINF:-1,FS Channel 5
 http://176.65.146.224:4003/play/a06g
-#EXTINF:-1,FS Channel 5 HD
+#EXTINF:-1,FS HD Channel 5 HD
 http://176.65.146.224:4003/play/a06m
 #EXTINF:-1,FS Channel 5+1
 http://176.65.146.224:4003/play/a06l
@@ -117,7 +117,7 @@ http://176.65.146.224:4004/play/a06m
 http://176.65.146.224:4004/play/a06j
 #EXTINF:-1,FS ITV1 HD
 http://176.65.146.224:4004/play/a07n
-#EXTINF:-1,FS ITV1 HD
+#EXTINF:-1,2FS ITV1 HD
 http://176.65.146.224:4004/play/a07k
 #EXTINF:-1,FS ITV1 Wales HD
 http://176.65.146.224:4004/play/a07m
