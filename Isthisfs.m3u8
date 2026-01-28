@@ -238,7 +238,7 @@ http://176.65.146.224:4007/play/a06x
 http://176.65.146.224:4007/play/a06u
 #EXTINF:-1,FS Really
 http://176.65.146.224:4007/play/a06n
-#EXTINF:-1,FS STV HD
+#EXTINF:-1,FS FHD STV HD
 http://176.65.146.224:4007/play/a073
 #EXTINF:-1 tvg-id="Sky.Mix.HD.uk" group-title="TV" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/sky-mix-uk.png",FS Sky Mix HD
 http://176.65.146.224:4007/play/a071
