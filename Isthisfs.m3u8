@@ -50,7 +50,7 @@ http://176.65.146.224:4008/play/a06h
 http://176.65.146.224:4008/play/a06g
 #EXTINF:-1,FS BBCScotlandHD
 http://176.65.146.224:4008/play/a06i
-#EXTINF:-1,FS 5 USA
+#EXTINF:-1 tvg-id="5.USA.uk" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-kingdom/5-usa-uk.png",FS 5USA
 http://176.65.146.224:4003/play/a06h
 #EXTINF:-1 tvg-id="5ACTION.uk" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-kingdom/5-action-uk.png",FS 5ACTION
 http://176.65.146.224:4003/play/a06n
@@ -193,7 +193,7 @@ http://176.65.146.224:4005/play/a06g/
 http://176.65.146.224:4001/play/a08i
 #EXTINF:-1,FS BBC One EastHD
 http://176.65.146.224:4001/play/a08h/
-#EXTINF:-1,FS BBC One Lon HD
+#EXTINF:-1 tvg-id="BBC.One.Lon.HD.uk" tvg-logo="https://i.ibb.co/Xk2nLVq/BBC-One.png",FS BBC One Lon HD
 http://176.65.146.224:4001/play/a08e
 #EXTINF:-1,FS BBC Two Wal HD
 http://176.65.146.224:4001/play/a08f
