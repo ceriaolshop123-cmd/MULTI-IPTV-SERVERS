@@ -115,9 +115,9 @@ http://176.65.146.224:4004/play/a06c
 http://176.65.146.224:4004/play/a06m
 #EXTINF:-1,FS GREAT!action+1
 http://176.65.146.224:4004/play/a06j
-#EXTINF:-1,FS ITV1 HD
+#EXTINF:-1 tvg-id="ITV1.HD.uk" tvg-logo="https://i.ibb.co/g6TqxVm/ITV1.png", FS ITV1 HD
 http://176.65.146.224:4004/play/a07n
-#EXTINF:-1,2FS ITV1 HD
+#EXTINF:-1 tvg-id="ITV1.HD.uk" tvg-logo="https://i.ibb.co/g6TqxVm/ITV1.png", 2FS ITV1 HD
 http://176.65.146.224:4004/play/a07k
 #EXTINF:-1,FS ITV1 Wales HD
 http://176.65.146.224:4004/play/a07m
