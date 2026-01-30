@@ -272,5 +272,10 @@ http://176.65.146.224:4008/play/a06h
 http://176.65.146.224:4008/play/a06g
 #EXTINF:-1,FS BBCScotlandHD
 http://176.65.146.224:4008/play/a06i
-
+#EXTINF:0,alt E4
+#EXTGRP: UK
+http://212.32.241.201:8000/play/a00b
+#EXTINF:0,alt E4Xtra
+#EXTGRP: UK
+http://212.32.241.201:8000/play/a008
 
